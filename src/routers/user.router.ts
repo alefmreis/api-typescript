@@ -9,5 +9,4 @@ routes.get(prefix, controller.findUsers);
 routes.get(`${prefix}/:email`, controller.findUser);
 routes.post(prefix, controller.create);
 
-
 export default routes;
