@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Db, Collection } from 'mongodb';
+import { Collection } from 'mongodb';
+import { db } from '../shared/database/database';
 
 export class BaseRepository<T>{
   readonly _collection: Collection;
 
-  constructor(private db: Db, readonly collectionName: string) {
+  constructor(readonly collectionName: string) {
     this._collection = db.collection(collectionName);
   }
 
