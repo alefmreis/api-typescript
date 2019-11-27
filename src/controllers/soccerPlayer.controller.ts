@@ -3,7 +3,6 @@ import { SoccerPlayerInterface } from '../models/interfaces/soccerPlayer.interfa
 import { SoccerPlayerRepository } from '../repositories/soccerPlayerRepository';
 import RequestHandler from '../shared/utils/requestHandler';
 
-
 class SoccerPlayerController {
   public async create(req: Request, res: Response): Promise<Response> {
     try {

@@ -25,8 +25,8 @@ class Application {
   }
 
   public async init(): Promise<void> {
-    this.setApplicationDependecies();
     await this.connectDatabase();
+    this.setApplicationDependecies();    
     this.server.listen(4000, () => {
       console.log("Application running on port 4000");
     });

@@ -10,12 +10,10 @@ class Database {
     db = await connection.db(Enviroment.databaseName);
   }
 
-
   public static async getDB(): Promise<Db> {
     if (!connection) {
       throw new Error('Database is not connected');
     }
-
     return db;
   }
 }
