@@ -27,4 +27,8 @@ export class BaseRepository<T>{
   async findOne(query): Promise<T | null> {
     return this._collection.findOne(query);
   }
+
+  async delete(query): Promise<any> {
+    return this._collection.deleteOne(query);
+  }
 }
